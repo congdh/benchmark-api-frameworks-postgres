@@ -16,9 +16,9 @@ config = context.config
 # This line sets up loggers basically.
 fileConfig(config.config_file_name)
 
-from fastapi_sqlalchemy import database  # type: ignore # noqa
+from fastapi_sqlalchemy import models  # type: ignore # noqa
 
-target_metadata = database.metadata
+target_metadata = models.Base.metadata
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
